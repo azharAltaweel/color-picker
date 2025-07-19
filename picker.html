@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Picker with Circle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* The circle */
+    #circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #3498db; /* default color */
+      border: 2px solid #000;
+      display: inline-block;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2> Choose a Color: </h2>
+
+  <!-- Color Picker -->
+  <input type="color" id="colorPicker" value="#3498db">
+
+  <!-- The Circle Element -->
+  <div id="circle"></div>
+
+  <!-- JavaScript to update circle color -->
+  <script>
+    const colorInput = document.getElementById("colorPicker");
+    const circle = document.getElementById("circle");
+
+    colorInput.addEventListener("input", function () {
+      circle.style.backgroundColor = this.value;
+    });
+  </script>
+
+</body>
+</html>
